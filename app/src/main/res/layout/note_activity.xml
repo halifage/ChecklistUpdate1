@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linear_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/note_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:background="@android:color/transparent"
+            android:focusableInTouchMode="true"
+            android:gravity="center_horizontal"
+            android:hint="please enter title"
+            android:imeOptions="actionDone"
+            android:inputType="textCapWords"
+            android:textColor="@color/colorPrimary"
+            android:textSelectHandle="@android:color/transparent"
+            android:textSize="24sp"
+            android:textStyle="bold"
+
+            />
+
+        <EditText
+            android:id="@+id/note_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:hint="note"
+            android:imeOptions="actionDone"
+            android:inputType="textCapSentences|textMultiLine"
+            android:textSelectHandle="@android:color/transparent" />
+    </LinearLayout>
+</ScrollView>
