@@ -37,7 +37,7 @@ public class ChecklistActivity extends AppCompatActivity {
     static AdapterCheckedItems adapter_checkedItems;
     EditText listItem;
     EditText title;
-//    TextView title_text;
+    TextView title_text;
     static ArrayList<String> checkedItems;
     static ArrayList<String> uncheckedItems;
     int itemID = -2;
@@ -62,8 +62,8 @@ public class ChecklistActivity extends AppCompatActivity {
             uncheckedItems.addAll(stringToArrayList(cursor.getString(cursor.getColumnIndex(COLUMN_UNCHECKED))));
             adapter_checkedItems.notifyDataSetChanged();
             adapter_uncheckedItems.notifyDataSetChanged();
-//            title_text.setText(getTitle());
-//            title_text.setVisibility(View.VISIBLE);
+            title_text.setText(getTitle());
+            title_text.setVisibility(View.VISIBLE);
 
             title.setText(getTitle().toString().trim());
             listItem.setVisibility(View.VISIBLE);
@@ -77,7 +77,7 @@ public class ChecklistActivity extends AppCompatActivity {
         itemsUnchecked = findViewById(R.id.unchecked);
         itemsChecked = findViewById(R.id.checked);
         title = findViewById(R.id.title);
-//        title_text = findViewById(R.id.title_textview);
+//        title_text = findViewById(R.id.note_title);
         checkedItems = new ArrayList<>();
         uncheckedItems = new ArrayList<>();
         adapter_checkedItems = new AdapterCheckedItems(this, R.layout.checked_row, checkedItems);
